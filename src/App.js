@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 /* =====================================
    FINAL BOSS PORTFOLIO (INDUSTRY LEVEL++)
@@ -132,7 +132,7 @@ const Typing = () => {
     }, 70);
 
     return () => clearTimeout(timeout);
-  }, [subIndex, reverse, index]);
+  }, [subIndex, reverse, index, texts]);
 
   return <p className="text-lg mb-6 text-white/90">{texts[index].substring(0, subIndex)}|</p>;
 };
