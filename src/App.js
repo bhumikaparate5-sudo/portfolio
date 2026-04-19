@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 
 /* =====================================
@@ -110,7 +110,7 @@ const Navbar = ({ dark, toggleDark, active }) => {
 
 // ---------------- TYPEWRITER ----------------
 const Typing = () => {
-  const texts = ["Frontend Developer", "Full Stack Developer", "React Engineer"];
+  const texts = useMemo(() => ["Frontend Developer", "Full Stack Developer", "React Engineer"], []);
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [reverse, setReverse] = useState(false);
